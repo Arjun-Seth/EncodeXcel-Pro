@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncodeXcel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="img-cont">
+            <img src="./asset/mcarbon-logo.jpg" alt="mCarbon Logo" class="logo">
+        </div>
+        <h1 class="gradient-text">EncodeXcel Pro</h1>
+        <p class="heading-p">Process, Encode, Calculate PDU and View SMS Data</p>
+        <input type="file" id="upload" accept=".xlsx, .xls, .csv, .xlsb" />
+        <button id="processButton" class="button">Process and Encode</button>
+        <div id="status" class="status"></div>
+        <div class="btn-cont">
+
+        
+        <a id="downloadButton" href="#" style="display: none;" download="encoded_pdu_data.xlsx">
+            <button id="downloadBtn" class="button">Download Encoded File</button>
+        </a>
+        <button id="viewButton" class="button" style="display: none;">View Encoded File</button>
+    </div>
+        <div id="tableContainer" style="display: none;"></div>
+        <div id="instructions">
+            <p class="note">
+                <strong>Note:</strong> The URL encoding process and SMS Length (PDU) calculation begin from <strong>Column 4</strong> and continue through all subsequent columns, starting from
+                <strong>Row 2</strong> of the Excel sheet. Please structure your data accordingly for accurate
+                results.
+            </p>
+
+        </div>
+        <div class="sample-file">
+            <p><a href="./asset/Sample-format.xlsx" download>Download a sample Excel file</a> for testing.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Made with ❤️ by Arjun</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
